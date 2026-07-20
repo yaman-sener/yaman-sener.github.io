@@ -77,6 +77,7 @@
 
         @media (prefers-reduced-motion: reduce) {
             .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .animate-ping { animation: none !important; }
             html { scroll-behavior: auto; }
         }
 
@@ -105,6 +106,9 @@
             <div class="flex items-center gap-3">
                 <a href="https://www.linkedin.com/in/yaman-%C5%9Fener-285174422/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-muted hover:text-royal transition-colors text-lg w-9 h-9 grid place-items-center">
                     <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://docs.google.com/document/d/1dEGLqtlDOncjkapcNYRM5wmN187FPryT1JGFyMq8qfg/edit?usp=sharing" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 border border-ochre/40 text-ochre text-sm font-semibold px-4 py-2 rounded-full hover:bg-ochre hover:text-white transition-colors cursor-pointer">
+                    <i class="fa-regular fa-file-lines"></i> Güncel CV
                 </a>
                 <a href="#iletisim" class="hidden sm:inline-flex items-center gap-2 bg-ink text-paper text-sm font-semibold px-4 py-2 rounded-full hover:bg-royal transition-colors cursor-pointer">
                     İletişim
@@ -136,6 +140,13 @@
                 </p>
 
                 <div class="reveal flex flex-wrap items-center gap-3 mb-10">
+                    <a href="https://docs.google.com/document/d/1dEGLqtlDOncjkapcNYRM5wmN187FPryT1JGFyMq8qfg/edit?usp=sharing" target="_blank" rel="noopener" class="group inline-flex items-center gap-2.5 bg-ochre text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg shadow-ochre/25 hover:bg-ochre/90 transition-colors cursor-pointer">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/70"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+                        </span>
+                        Güncel CV'yi Gör <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-80"></i>
+                    </a>
                     <a href="#projeler" class="inline-flex items-center gap-2 bg-ink text-paper px-6 py-3 rounded-full font-semibold text-sm hover:bg-royal transition-colors cursor-pointer">
                         Projelerimi Gör <i class="fa-solid fa-arrow-down text-xs"></i>
                     </a>
@@ -146,6 +157,9 @@
                         <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn
                     </a>
                 </div>
+                <p class="reveal text-xs text-muted mb-8 -mt-4 flex items-center gap-1.5">
+                    <i class="fa-solid fa-rotate text-ochre"></i> CV'im sürekli güncel tutuluyor — en son çalışmalarım her zaman burada.
+                </p>
 
                 <div class="reveal flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
                     <span class="inline-flex items-center gap-2"><i class="fa-solid fa-location-dot text-ochre"></i> Maltepe / İstanbul</span>
@@ -487,6 +501,14 @@
                     <p class="text-sm text-muted leading-relaxed">Engellilik alanındaki mevcut durumu ve politika önerilerini derleyen çalışma (taslak aşamasında).</p>
                 </div>
             </a>
+
+            <a href="https://docs.google.com/document/d/1spDWBOvXy2LVCHltQmKxTLPK3lT9x8PTyKEB_0H29pU/edit?usp=sharing" target="_blank" rel="noopener" class="reveal group flex gap-5 bg-paper border border-line rounded-2xl p-6 hover:border-royal hover:shadow-lg transition-all">
+                <span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-amber-50 text-amber-600 text-lg group-hover:bg-amber-600 group-hover:text-white transition-colors"><i class="fa-solid fa-users-rectangle"></i></span>
+                <div>
+                    <h3 class="font-serif text-lg font-semibold mb-1.5 group-hover:text-royal transition-colors">Yeşilay Gençlik Çalıştayı Raporu</h3>
+                    <p class="text-sm text-muted leading-relaxed">Uluslararası Genç Derneği / Yeşilay çalıştay raporunun değerlendirme, eleştiri ve editörlük çalışması.</p>
+                </div>
+            </a>
         </div>
     </div>
 </section>
@@ -587,12 +609,17 @@
             aklınızda bir iş varsa yazın — hızlı dönerim.
         </p>
 
-        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href="mailto:yamansnr@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-paper text-ink px-7 py-4 rounded-full font-bold hover:bg-white transition-colors cursor-pointer">
                 <i class="fa-regular fa-paper-plane text-royal"></i> yamansnr@gmail.com
             </a>
             <a href="tel:+905524142711" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 border border-white/20 px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors">
                 <i class="fa-solid fa-phone text-ochre"></i> +90 552 414 27 11
+            </a>
+        </div>
+        <div class="reveal mb-12">
+            <a href="https://docs.google.com/document/d/1dEGLqtlDOncjkapcNYRM5wmN187FPryT1JGFyMq8qfg/edit?usp=sharing" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-ochre font-semibold hover:text-white transition-colors border-b border-ochre/40 hover:border-white pb-0.5">
+                <i class="fa-regular fa-file-lines"></i> Sürekli güncellenen CV'mi görüntüle <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
             </a>
         </div>
 
