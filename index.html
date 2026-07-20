@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaman Şener — Sosyolog &amp; Dijital Proje Koordinatörü</title>
+    <meta name="description" content="Yaman Şener: Marmara Sosyoloji mezunu araştırmacı ve dijital proje koordinatörü. Saha araştırmasını veri analizi ve web platformlarıyla birleştirir; 10'dan fazla platformu uçtan uca kurar, ulusal medyada tanıtılan projeler üretir.">
+    <meta name="author" content="Yaman Şener">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yaman Şener — Sosyolog & Dijital Proje Koordinatörü">
+    <meta property="og:description" content="Saha araştırmasını veri analizi ve web platformlarıyla birleştiren araştırmacı ve dijital proje koordinatörü.">
+    <meta property="og:image" content="profile.png">
+    <meta name="theme-color" content="#1c1917">
+
+    <!-- Progressive enhancement: only hide reveal elements when JS runs -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Newsreader (editorial serif) + Inter (UI sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Newsreader"', 'Georgia', 'serif'],
+                        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        paper:   '#FBFAF8',
+                        surface: '#FFFFFF',
+                        ink:     '#1C1917',
+                        muted:   '#57534E',
+                        line:    '#E7E5E4',
+                        royal:   '#1E40AF',
+                        ochre:   '#B45309',
+                    },
+                    maxWidth: {
+                        '8xl': '88rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { -webkit-font-smoothing: antialiased; }
+        body { font-feature-settings: "kern", "liga", "calt"; }
+
+        .hl { background: linear-gradient(180deg, transparent 62%, rgba(180,83,9,0.16) 62%); }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #FBFAF8; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 6px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+        .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+        .js .reveal.in { opacity: 1; transform: translateY(0); }
+
+        .grain::before {
+            content: ""; position: absolute; inset: 0; pointer-events: none;
+            background-image: radial-gradient(rgba(28,25,23,0.04) 1px, transparent 1px);
+            background-size: 22px 22px; opacity: .6;
+        }
+
+        .aurora { filter: blur(70px); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            html { scroll-behavior: auto; }
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #1E40AF; outline-offset: 3px; border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-ink selection:text-paper">
+
+<!-- ============ HEADER ============ -->
+<header id="top" class="fixed top-0 inset-x-0 z-50 bg-paper/80 backdrop-blur-md border-b border-line">
+    <div class="max-w-8xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="#top" class="font-serif text-xl font-semibold tracking-tight">
+                Yaman Şener<span class="text-ochre">.</span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-muted">
+                <a href="#hakkimda" class="hover:text-ink transition-colors">Hakkımda</a>
+                <a href="#yaptigim-is" class="hover:text-ink transition-colors">Ne Yaparım</a>
+                <a href="#deneyim" class="hover:text-ink transition-colors">Deneyim</a>
+                <a href="#projeler" class="hover:text-ink transition-colors">Projeler</a>
+                <a href="#raporlar" class="hover:text-ink transition-colors">Araştırmalar</a>
+                <a href="#egitim" class="hover:text-ink transition-colors">Eğitim</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="https://www.linkedin.com/in/yaman-%C5%9Fener-285174422/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-muted hover:text-royal transition-colors text-lg w-9 h-9 grid place-items-center">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#iletisim" class="hidden sm:inline-flex items-center gap-2 bg-ink text-paper text-sm font-semibold px-4 py-2 rounded-full hover:bg-royal transition-colors cursor-pointer">
+                    İletişim
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hakkimda" class="relative grain overflow-hidden pt-28 md:pt-36 pb-20 md:pb-28">
+    <div aria-hidden="true" class="aurora absolute -top-24 -left-24 w-[38rem] h-[38rem] rounded-full bg-royal/10"></div>
+    <div aria-hidden="true" class="aurora absolute top-40 -right-32 w-[34rem] h-[34rem] rounded-full bg-ochre/10"></div>
+
+    <div class="relative max-w-8xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div class="lg:col-span-7 order-2 lg:order-1">
+                <p class="reveal text-sm font-semibold tracking-wide text-muted uppercase mb-5">
+                    Sosyolog · Sosyal Araştırmacı · Dijital Proje Koordinatörü
+                </p>
+                <h1 class="reveal font-serif text-4xl sm:text-5xl lg:text-[3.55rem] leading-[1.08] font-medium tracking-tight mb-7">
+                    Sahadaki bilgiyi, insanların gerçekten <span class="hl">kullandığı</span> dijital platformlara dönüştürüyorum.
+                </h1>
+                <p class="reveal text-lg text-muted leading-relaxed max-w-2xl mb-8">
+                    Ben Yaman Şener. Marmara Üniversitesi Sosyoloji mezunuyum; on yılı aşkın süredir araştırma,
+                    içerik ve teknolojiyi tek bir masada buluşturuyorum. Dağınık verileri toplayıp aranabilir platformlara,
+                    saha gözlemlerini karar vericilerin okuyabileceği raporlara çeviriyorum. Fikir aşamasından yayına kadar
+                    bir projenin her adımında bizzat çalışırım.
+                </p>
+
+                <div class="reveal flex flex-wrap items-center gap-3 mb-10">
+                    <a href="#projeler" class="inline-flex items-center gap-2 bg-ink text-paper px-6 py-3 rounded-full font-semibold text-sm hover:bg-royal transition-colors cursor-pointer">
+                        Projelerimi Gör <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <a href="#iletisim" class="inline-flex items-center gap-2 bg-surface border border-line px-6 py-3 rounded-full font-semibold text-sm text-ink hover:border-ink transition-colors cursor-pointer">
+                        <i class="fa-regular fa-envelope text-royal"></i> Benimle Çalış
+                    </a>
+                    <a href="https://www.linkedin.com/in/yaman-%C5%9Fener-285174422/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-3 rounded-full font-semibold text-sm text-muted hover:text-royal transition-colors">
+                        <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn
+                    </a>
+                </div>
+
+                <div class="reveal flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
+                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-location-dot text-ochre"></i> Maltepe / İstanbul</span>
+                    <a href="mailto:yamansnr@gmail.com" class="inline-flex items-center gap-2 hover:text-ink transition-colors"><i class="fa-regular fa-envelope text-ochre"></i> yamansnr@gmail.com</a>
+                    <a href="tel:+905524142711" class="inline-flex items-center gap-2 hover:text-ink transition-colors"><i class="fa-solid fa-phone text-ochre"></i> +90 552 414 27 11</a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div class="reveal relative">
+                    <div class="absolute -inset-3 bg-gradient-to-tr from-royal/15 to-ochre/15 rounded-[2rem] blur-xl"></div>
+                    <img src="profile.png" alt="Yaman Şener'in portre fotoğrafı" width="360" height="360"
+                         class="relative z-10 w-64 h-64 sm:w-80 sm:h-80 lg:w-[22rem] lg:h-[22rem] object-cover rounded-[2rem] border border-line shadow-xl">
+                    <div class="absolute z-20 -bottom-5 -left-5 bg-surface border border-line rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3">
+                        <span class="grid place-items-center w-9 h-9 rounded-full bg-royal/10 text-royal"><i class="fa-solid fa-layer-group text-sm"></i></span>
+                        <div class="leading-tight">
+                            <p class="text-[11px] uppercase tracking-wide text-muted font-semibold">Uçtan uca teslim</p>
+                            <p class="text-sm font-bold">10+ dijital platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-line border border-line rounded-2xl overflow-hidden">
+            <div class="bg-paper px-6 py-7">
+                <div class="font-serif text-3xl md:text-4xl font-semibold text-ink">10+</div>
+                <p class="text-sm text-muted mt-1">Uçtan uca kurulan web platformu</p>
+            </div>
+            <div class="bg-paper px-6 py-7">
+                <div class="font-serif text-3xl md:text-4xl font-semibold text-ink">2.400+</div>
+                <p class="text-sm text-muted mt-1">Tek platformda derlenen yaz okulu kaydı</p>
+            </div>
+            <div class="bg-paper px-6 py-7">
+                <div class="font-serif text-3xl md:text-4xl font-semibold text-ink">3.000+</div>
+                <p class="text-sm text-muted mt-1">Sıfırdan yazılan İngilizce içerik</p>
+            </div>
+            <div class="bg-paper px-6 py-7">
+                <div class="font-serif text-3xl md:text-4xl font-semibold text-ink">Ulusal</div>
+                <p class="text-sm text-muted mt-1">Medyada tanıtılan projeler &amp; raporlar</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHAT I DO ============ -->
+<section id="yaptigim-is" class="py-20 md:py-28 bg-surface border-y border-line">
+    <div class="max-w-8xl mx-auto px-5 sm:px-8">
+        <div class="max-w-3xl mb-14 reveal">
+            <p class="text-sm font-semibold tracking-wide text-royal uppercase mb-3">Ne yaparım</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium tracking-tight mb-4">Bir işe alacaksanız, beni bunun için alırsınız</h2>
+            <p class="text-lg text-muted leading-relaxed">
+                Üç işi aynı anda yapabilen kişileri arıyorsanız durabilirsiniz: araştırmayı kuran,
+                çıktıyı düzenli bir rapora çeviren ve o bilgiyi çalışan bir web platformuna taşıyan tek kişi.
+                Yapay zekâ ve otomasyon araçlarını da bu işleri hızlandırmak için kullanırım — ama işin merkezinde
+                her zaman doğru soru, temiz veri ve okunabilir çıktı vardır.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="reveal group relative bg-paper border border-line rounded-2xl p-8 hover:border-ink transition-colors">
+                <span class="grid place-items-center w-12 h-12 rounded-xl bg-royal/10 text-royal text-xl mb-6"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                <h3 class="font-serif text-xl font-semibold mb-3">Sosyal araştırma &amp; raporlama</h3>
+                <p class="text-sm text-muted leading-relaxed mb-5">
+                    Saha araştırması, nicel/nitel analiz, söylem ve tematik analiz, profil ve arketip çözümlemesi.
+                    Karmaşık bulguları; yöneticinin, üniversitenin ya da medya kuruluşunun beş dakikada kavrayacağı
+                    profesyonel raporlara dönüştürürüm.
+                </p>
+                <ul class="text-sm text-ink/80 space-y-1.5">
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-royal text-xs mt-1.5"></i> TİAK reyting &amp; demografik veri analizi</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-royal text-xs mt-1.5"></i> Söylem, tematik ve transkript analizi</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-royal text-xs mt-1.5"></i> Karar vericilere sunuma hazır çıktı</li>
+                </ul>
+            </div>
+
+            <div class="reveal group relative bg-paper border border-line rounded-2xl p-8 hover:border-ink transition-colors">
+                <span class="grid place-items-center w-12 h-12 rounded-xl bg-ochre/10 text-ochre text-xl mb-6"><i class="fa-solid fa-window-restore"></i></span>
+                <h3 class="font-serif text-xl font-semibold mb-3">Dijital platform kurulumu</h3>
+                <p class="text-sm text-muted leading-relaxed mb-5">
+                    Fikirden yayına: içerik üretimi, site içi teknik editörlük, SEO, tasarım koordinasyonu ve
+                    kalite kontrol. Dağınık bilgiyi il/ilçe bazlı aranabilir, filtrelenebilir ve hızlı yüklenen
+                    arayüzlere taşırım.
+                </p>
+                <ul class="text-sm text-ink/80 space-y-1.5">
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-ochre text-xs mt-1.5"></i> İçerik yönetimi &amp; yazı/teknik editörlük</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-ochre text-xs mt-1.5"></i> SEO, Google Analytics &amp; Search Console</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-ochre text-xs mt-1.5"></i> Cloudflare Workers/Pages üzerinde yayın</li>
+                </ul>
+            </div>
+
+            <div class="reveal group relative bg-paper border border-line rounded-2xl p-8 hover:border-ink transition-colors">
+                <span class="grid place-items-center w-12 h-12 rounded-xl bg-ink/10 text-ink text-xl mb-6"><i class="fa-solid fa-diagram-project"></i></span>
+                <h3 class="font-serif text-xl font-semibold mb-3">Proje koordinasyonu &amp; entegrasyon</h3>
+                <p class="text-sm text-muted leading-relaxed mb-5">
+                    Çok paydaşlı projeleri planlar, ekip içi akışı kurar ve teknik parçaları birbirine bağlarım.
+                    Apify ile veri çekme, admin panel akışları ve API entegrasyonlarını devreye alıp süreci hızlı,
+                    pratik ve düzenli çıktılara oturturum.
+                </p>
+                <ul class="text-sm text-ink/80 space-y-1.5">
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-ink text-xs mt-1.5"></i> Apify ile scraping &amp; otomasyon</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-ink text-xs mt-1.5"></i> Python ile veri toplama &amp; işleme</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-ink text-xs mt-1.5"></i> Fikir → kurulum → test → yayın</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="deneyim" class="py-20 md:py-28">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="mb-14 reveal">
+            <p class="text-sm font-semibold tracking-wide text-royal uppercase mb-3">İş deneyimi</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium tracking-tight">On yılın izini süren bir çalışma geçmişi</h2>
+        </div>
+
+        <div class="space-y-10">
+            <article class="reveal relative pl-8 md:pl-10 border-l-2 border-line">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-royal ring-4 ring-paper"></span>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
+                    <h3 class="font-serif text-xl font-semibold">Dijital Proje Koordinatörü &amp; Sosyolog</h3>
+                    <span class="text-sm font-medium text-royal whitespace-nowrap">Eylül 2025 – Halen</span>
+                </div>
+                <p class="text-sm font-semibold text-muted mb-3">Dulda Sosyal İnovasyon Merkezi — Esenlik Vakfı</p>
+                <p class="text-[15px] text-muted leading-relaxed mb-4">
+                    Yeşilay Başkanı Mehmet Dinç öncülüğünde, <a href="https://dulda.org/" target="_blank" rel="noopener" class="text-royal underline decoration-royal/30 hover:decoration-royal">dulda.org</a>
+                    çatısı altında yürütülen dijital sosyal inovasyon projelerinde görev alıyorum. Ortak amaç: niş kalmış
+                    toplulukların faaliyetlerini özenli filtrelerle elle seçip tek çatı altında toplamak. Fikir, teknik kurulum,
+                    içerik, tasarım, editörlük, test, SEO ve entegrasyonların tamamında bizzat çalışıyorum.
+                </p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="bg-surface border border-line rounded-xl p-4">
+                        <a href="https://yaz.genclink.com/programlar" target="_blank" rel="noopener" class="font-semibold text-sm hover:text-royal transition-colors">Türkiye Yaz Okulları Platformu <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        <p class="text-[13px] text-muted mt-1 leading-snug">2.400'den fazla yaz okulu ve Kur'an kursunu il/ilçe bazlı aranabilir grid arayüze taşıdım; Apify ile otomatik veri çekme ve admin panel akışını kurdum.</p>
+                    </div>
+                    <div class="bg-surface border border-line rounded-xl p-4">
+                        <a href="https://etkinlink.org/" target="_blank" rel="noopener" class="font-semibold text-sm hover:text-royal transition-colors">Etkinlink — STK Etkinlik Toplayıcısı <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        <p class="text-[13px] text-muted mt-1 leading-snug">Vakıf, atölye ve STK Instagram hesaplarını Apify ile bağlayarak online/yüz yüze etkinlikleri anlık tek platformda topladım.</p>
+                    </div>
+                    <div class="bg-surface border border-line rounded-xl p-4">
+                        <a href="https://mekan.genclink.com/" target="_blank" rel="noopener" class="font-semibold text-sm hover:text-royal transition-colors">Gençlik Mekânları Rehberi <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        <p class="text-[13px] text-muted mt-1 leading-snug">İstanbul'daki STK, atölye ve girişimleri derledim; saha araştırmasının sonunda kapsamlı bir değerlendirme ve öneri raporu hazırladım.</p>
+                    </div>
+                    <div class="bg-surface border border-line rounded-xl p-4">
+                        <a href="https://sosyal-girisimler-rehberi.daha-iyi-projeler.workers.dev/" target="_blank" rel="noopener" class="font-semibold text-sm hover:text-royal transition-colors">Sosyal Girişimler Rehberi <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        <p class="text-[13px] text-muted mt-1 leading-snug">Türkiye ve dünyadan ~300 aktif sosyal girişim yayınladım; 800'ü aşkın ek girişimlik içerik havuzu hazırladım.</p>
+                    </div>
+                </div>
+                <p class="text-[13px] text-muted mt-4 leading-relaxed">
+                    Yaz Okulları platformu <span class="text-ink font-medium">Bekir Develi, Okuldışı, Nurhaktan</span> ve
+                    <span class="text-ink font-medium">Bold Keşif Medya</span> gibi yüksek erişimli hesaplarca tanıtıldı;
+                    <span class="text-ink font-medium">Nihayet Dergisi</span> Temmuz sayısında ilk sayfa yazısı olarak yer aldı.
+                    Ayrıca <a href="https://boykotaktivizmi.com/" target="_blank" rel="noopener" class="text-royal underline decoration-royal/30 hover:decoration-royal">boykotaktivizmi.com</a>
+                    (165+ oluşum) ve <a href="https://hazine.genclink.com/" target="_blank" rel="noopener" class="text-royal underline decoration-royal/30 hover:decoration-royal">hazine.genclink.com</a>
+                    projelerinde de yer aldım.
+                </p>
+            </article>
+
+            <article class="reveal relative pl-8 md:pl-10 border-l-2 border-line">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-stone-400 ring-4 ring-paper"></span>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
+                    <h3 class="font-serif text-xl font-semibold">İçerik Yönetimi</h3>
+                    <span class="text-sm font-medium text-muted whitespace-nowrap">Temmuz 2025</span>
+                </div>
+                <p class="text-sm font-semibold text-muted mb-3">HalalWorld — Helal Tatil Platformu</p>
+                <p class="text-[15px] text-muted leading-relaxed">
+                    <a href="https://halalworld.com/tr" target="_blank" rel="noopener" class="text-royal underline decoration-royal/30 hover:decoration-royal">halalworld.com/tr</a> —
+                    helal konseptli otelleri bir araya getiren uluslararası turizm girişiminde; otel içeriklerinin toplanması,
+                    düzenlenmesi ve SEO'ya uygun biçimde yayına hazırlanması süreçlerini yürüttüm.
+                </p>
+            </article>
+
+            <article class="reveal relative pl-8 md:pl-10 border-l-2 border-line">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-stone-400 ring-4 ring-paper"></span>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
+                    <h3 class="font-serif text-xl font-semibold">Kurucu / Yayıncı &amp; Reklam Ortaklıkları Yöneticisi</h3>
+                    <span class="text-sm font-medium text-muted whitespace-nowrap">2019 – 2023</span>
+                </div>
+                <p class="text-sm font-semibold text-muted mb-3">Gamesron · GamesGDS · Guideoui — Oyun Medyası</p>
+                <p class="text-[15px] text-muted leading-relaxed">
+                    Üç ayrı oyun medyası kurdum ve yönettim. Yapay zekâ olmadan <span class="text-ink font-medium">3.000'den fazla İngilizce</span>
+                    inceleme, kılavuz ve değerlendirme yazısı yayınladım; Steam, Epic ve GOG'da yeni çıkan oyunlara dair anlık içerik ürettim.
+                    <a href="https://www.playwire.com/" target="_blank" rel="noopener" class="text-royal underline decoration-royal/30 hover:decoration-royal">Playwire</a> ve
+                    <a href="https://www.primis.tech/" target="_blank" rel="noopener" class="text-royal underline decoration-royal/30 hover:decoration-royal">Primis</a>
+                    gibi Google video reklam ağlarıyla partnerlikler kurdum; içerik–trafik–geliri organik SEO ile büyüttüm.
+                </p>
+            </article>
+
+            <article class="reveal relative pl-8 md:pl-10 border-l-2 border-line">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-stone-400 ring-4 ring-paper"></span>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
+                    <h3 class="font-serif text-xl font-semibold">Sosyolog / Saha Araştırmacısı</h3>
+                    <span class="text-sm font-medium text-muted whitespace-nowrap">2015 – Halen</span>
+                </div>
+                <p class="text-sm font-semibold text-muted mb-3">Çeşitli Sosyal Araştırma Projeleri</p>
+                <p class="text-[15px] text-muted leading-relaxed">
+                    Çeşitli rapor ve çalışmalarda sosyolog kimliğiyle bizzat saha araştırmaları yürüttüm. Kişisel PDF araştırma
+                    arşivim ve sosyal bilim birikimimle, araştırma çıktılarını hızlı ve profesyonel raporlara dönüştürmekte uzmanlaştım.
+                </p>
+            </article>
+
+            <article class="reveal relative pl-8 md:pl-10 border-l-2 border-line">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-stone-400 ring-4 ring-paper"></span>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
+                    <h3 class="font-serif text-xl font-semibold">YouTube İçerik Üreticisi &amp; Metin Yazarı</h3>
+                    <span class="text-sm font-medium text-muted whitespace-nowrap">2022</span>
+                </div>
+                <p class="text-sm font-semibold text-muted mb-3">Atlas Sisy</p>
+                <p class="text-[15px] text-muted leading-relaxed">
+                    Sinema, sosyoloji ve felsefeyi bir araya getiren, araştırma odaklı içerikler ürettiğim kişisel YouTube projem.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projeler" class="py-20 md:py-28 bg-ink text-paper relative overflow-hidden">
+    <div aria-hidden="true" class="aurora absolute top-0 right-0 w-[36rem] h-[36rem] rounded-full bg-royal/20"></div>
+    <div class="relative max-w-8xl mx-auto px-5 sm:px-8">
+        <div class="max-w-3xl mb-14 reveal">
+            <p class="text-sm font-semibold tracking-wide text-ochre uppercase mb-3">Projeler</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium tracking-tight mb-4">Fikirden yayına taşıdığım platformlar</h2>
+            <p class="text-lg text-paper/70 leading-relaxed">
+                Kurumsal işlerin yanında bağımsız olarak da geliştiriyorum. Her biri araştırma, içerik ve teknik
+                kurulumu birlikte gerektiren, canlıda çalışan projeler.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <a href="https://yaz.genclink.com/programlar" target="_blank" rel="noopener" class="reveal group flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-royal transition-colors">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-royal/25 text-blue-200">Apify</span>
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-white/10 text-paper/80">Veri Çekme</span>
+                </div>
+                <h3 class="font-serif text-lg font-semibold mb-2">Türkiye Yaz Okulları Platformu</h3>
+                <p class="text-sm text-paper/60 leading-relaxed flex-1">2.400+ yaz okulunu il/ilçe bazlı aranabilir grid arayüze taşıyan, ulusal medyada tanıtılan platform.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-300 group-hover:gap-3 transition-all">Siteye git <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <a href="https://cine-deck-film-portali.pages.dev/" target="_blank" rel="noopener" class="reveal group flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-ochre transition-colors">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-ochre/25 text-amber-200">SPA</span>
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-white/10 text-paper/80">UI/UX</span>
+                </div>
+                <h3 class="font-serif text-lg font-semibold mb-2">CINE-DECK — Film Dizini</h3>
+                <p class="text-sm text-paper/60 leading-relaxed flex-1">Film kartlarını yerel özelleştirme, tür bazlı filtreleme ve doğrudan izleme linkleri sunan minimalist tek sayfa uygulaması.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-amber-300 group-hover:gap-3 transition-all">Siteye git <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <a href="https://minik-raf.yamansnr.workers.dev/katalog/" target="_blank" rel="noopener" class="reveal group flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-royal transition-colors">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-royal/25 text-blue-200">Katalog</span>
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-white/10 text-paper/80">Dinamik Filtre</span>
+                </div>
+                <h3 class="font-serif text-lg font-semibold mb-2">Minik Raf — Kitap &amp; Oyuncak</h3>
+                <p class="text-sm text-paper/60 leading-relaxed flex-1">0-13 yaş için yaş/kategori bazlı dinamik filtreli katalog; ürün detayı, öneri formu ve editöryel rehber içerikleri.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-300 group-hover:gap-3 transition-all">Siteye git <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <a href="https://sosyal-girisimler-rehberi.daha-iyi-projeler.workers.dev/" target="_blank" rel="noopener" class="reveal group flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-ochre transition-colors">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-ochre/25 text-amber-200">Araştırma</span>
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-white/10 text-paper/80">Rehber</span>
+                </div>
+                <h3 class="font-serif text-lg font-semibold mb-2">Sosyal Girişimler Rehberi</h3>
+                <p class="text-sm text-paper/60 leading-relaxed flex-1">Türkiye ve dünyadan ~300 sosyal girişimi derleyen, STK'lara hazır fikirler servis eden rehber platform.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-amber-300 group-hover:gap-3 transition-all">Siteye git <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <a href="https://etkinlink.org/" target="_blank" rel="noopener" class="reveal group flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-royal transition-colors">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-royal/25 text-blue-200">STK</span>
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-white/10 text-paper/80">Anlık Toplama</span>
+                </div>
+                <h3 class="font-serif text-lg font-semibold mb-2">Etkinlink &amp; Gençlik Mekânları</h3>
+                <p class="text-sm text-paper/60 leading-relaxed flex-1">Vakıf ve STK etkinliklerini anlık toplayan ajanda ile İstanbul'daki gençlik mekânlarını haritalayan rehber.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-300 group-hover:gap-3 transition-all">Siteye git <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <a href="https://boykotaktivizmi.com/" target="_blank" rel="noopener" class="reveal group flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-ochre transition-colors">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-ochre/25 text-amber-200">Aktivizm</span>
+                    <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-white/10 text-paper/80">Yönlendirme</span>
+                </div>
+                <h3 class="font-serif text-lg font-semibold mb-2">Boykot Aktivizmi</h3>
+                <p class="text-sm text-paper/60 leading-relaxed flex-1">Filistin boykotu yürüten 165'ten fazla oluşumu tanıtan ve kolay yönlendirme sağlayan platform.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-amber-300 group-hover:gap-3 transition-all">Siteye git <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+        </div>
+
+        <p class="reveal text-sm text-paper/50 mt-8">
+            Geliştirme aşamasında: Hazine (kurs &amp; kaynak rehberi), Uncular Sinema Kafe konsepti, IPAD Atıcılık salon projesi ve akademik bulguları derleyen Araştırma Takip Merkezi.
+        </p>
+    </div>
+</section>
+
+<!-- ============ RESEARCH & REPORTS ============ -->
+<section id="raporlar" class="py-20 md:py-28 bg-surface border-y border-line">
+    <div class="max-w-8xl mx-auto px-5 sm:px-8">
+        <div class="max-w-3xl mb-14 reveal">
+            <p class="text-sm font-semibold tracking-wide text-royal uppercase mb-3">Araştırma &amp; raporlar</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium tracking-tight mb-4">Veriyi karar vericilerin diline çeviririm</h2>
+            <p class="text-lg text-muted leading-relaxed">
+                Nicel verileri (TİAK reyting, demografi) ve nitel yöntemleri (söylem, tematik ve transkript analizi)
+                birlikte kullanarak hazırladığım, kurum ve üniversitelere sunulmuş raporlar.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+            <a href="https://docs.google.com/document/d/1BDaiKsAKTqA33wmlDl9cHC-yC-kMveHQjoRzz9vxhF8/edit?usp=sharing" target="_blank" rel="noopener" class="reveal md:row-span-2 group flex flex-col bg-paper border border-line rounded-2xl p-8 hover:border-royal hover:shadow-lg transition-all">
+                <span class="grid place-items-center w-12 h-12 rounded-xl bg-red-50 text-red-600 text-xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors"><i class="fa-regular fa-file-pdf"></i></span>
+                <h3 class="font-serif text-2xl font-semibold mb-3 group-hover:text-royal transition-colors">Gündüz Kuşağı Medya ve Toplumsal Etki Analizi (2025)</h3>
+                <p class="text-sm text-muted leading-relaxed mb-4">
+                    Turkuaz Medya'ya gönderilen ve Karabük Üniversitesi Rektörlüğü'ne sunulan kapsamlı medya araştırması.
+                    2025 boyunca en yüksek izlenmeye sahip dört gündüz kuşağı programının (Müge Anlı, Esra Erol, Didem Arslan,
+                    Esra Ezmeci) TİAK verileriyle nicel analizi ve söylem analizi.
+                </p>
+                <ul class="text-sm text-ink/80 space-y-2 mb-5">
+                    <li class="flex gap-2"><i class="fa-solid fa-chart-column text-royal text-xs mt-1"></i> TİAK reyting, izlenme ve demografik veri analizi</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-comments text-royal text-xs mt-1"></i> Toplumsal güven, aile ve adalet algısı üzerine nitel analiz</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-user-tag text-royal text-xs mt-1"></i> Karakter arketipleri &amp; 12 aylık bütünleşik rapor serisi</li>
+                </ul>
+                <span class="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-royal group-hover:gap-3 transition-all">Raporu oku <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1WmBJY6Lh6FRlasgRWGQV96TtDu2Lrv47N8IXeHTb9TM/edit?usp=sharing" target="_blank" rel="noopener" class="reveal group flex gap-5 bg-paper border border-line rounded-2xl p-6 hover:border-royal hover:shadow-lg transition-all">
+                <span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-blue-50 text-blue-600 text-lg group-hover:bg-blue-600 group-hover:text-white transition-colors"><i class="fa-regular fa-file-lines"></i></span>
+                <div>
+                    <h3 class="font-serif text-lg font-semibold mb-1.5 group-hover:text-royal transition-colors">STK'larda Eksikler ve Öneriler Raporu (2025)</h3>
+                    <p class="text-sm text-muted leading-relaxed">İstanbul'daki STK'ların gençlik çalışmalarındaki eksiklerini analiz eden, mekan saha araştırmasının çıktısı olan değerlendirme raporu.</p>
+                </div>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1LbHO8WMm8MdJSTZKRcNnxd8x5_RO0DRSyjey8w8fo6g/edit?usp=sharing" target="_blank" rel="noopener" class="reveal group flex gap-5 bg-paper border border-line rounded-2xl p-6 hover:border-royal hover:shadow-lg transition-all">
+                <span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-emerald-50 text-emerald-600 text-lg group-hover:bg-emerald-600 group-hover:text-white transition-colors"><i class="fa-solid fa-wheelchair"></i></span>
+                <div>
+                    <h3 class="font-serif text-lg font-semibold mb-1.5 group-hover:text-royal transition-colors">Engellilik Çalışmaları: Mevcut Durum ve Öneriler</h3>
+                    <p class="text-sm text-muted leading-relaxed">Engellilik alanındaki mevcut durumu ve politika önerilerini derleyen çalışma (taslak aşamasında).</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SKILLS & TOOLS ============ -->
+<section id="yetkinlikler" class="py-20 md:py-28">
+    <div class="max-w-8xl mx-auto px-5 sm:px-8">
+        <div class="max-w-3xl mb-14 reveal">
+            <p class="text-sm font-semibold tracking-wide text-royal uppercase mb-3">Yetkinlikler &amp; araçlar</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium tracking-tight">Kullandığım yöntem ve araçlar</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="reveal bg-surface border border-line rounded-2xl p-6">
+                <h3 class="font-serif text-lg font-semibold mb-4 flex items-center gap-2"><i class="fa-solid fa-flask text-royal"></i> Araştırma yöntemleri</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Saha araştırması</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Söylem analizi</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Tematik analiz</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Nicel / nitel</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Transkript analizi</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Arketip çözümlemesi</span>
+                </div>
+            </div>
+
+            <div class="reveal bg-surface border border-line rounded-2xl p-6">
+                <h3 class="font-serif text-lg font-semibold mb-4 flex items-center gap-2"><i class="fa-solid fa-database text-ochre"></i> Veri &amp; analiz</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Python</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Google Colab</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">VS Code</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">SPSS</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">TİAK veri analizi</span>
+                </div>
+            </div>
+
+            <div class="reveal bg-surface border border-line rounded-2xl p-6">
+                <h3 class="font-serif text-lg font-semibold mb-4 flex items-center gap-2"><i class="fa-solid fa-globe text-royal"></i> Web &amp; SEO</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Web kurulum</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">SEO</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Google Analytics</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Search Console</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Cloudflare Workers/Pages</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Admin panel</span>
+                </div>
+            </div>
+
+            <div class="reveal bg-surface border border-line rounded-2xl p-6">
+                <h3 class="font-serif text-lg font-semibold mb-4 flex items-center gap-2"><i class="fa-solid fa-robot text-ochre"></i> AI &amp; otomasyon</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Claude (repo bazlı geliştirme)</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Apify</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Respond AI</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">API entegrasyonları</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="egitim" class="py-20 md:py-28 bg-surface border-y border-line">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="mb-12 reveal">
+            <p class="text-sm font-semibold tracking-wide text-royal uppercase mb-3">Eğitim</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium tracking-tight">Akademik altyapı</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5">
+            <div class="reveal bg-paper border border-line rounded-2xl p-7">
+                <div class="flex items-start justify-between gap-3 mb-2">
+                    <span class="grid place-items-center w-11 h-11 rounded-xl bg-royal/10 text-royal text-lg"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <span class="text-sm font-medium text-muted">2009 – 2015</span>
+                </div>
+                <h3 class="font-serif text-xl font-semibold mt-3">Sosyoloji, Lisans</h3>
+                <p class="text-sm text-muted mt-1">Marmara Üniversitesi</p>
+            </div>
+            <div class="reveal bg-paper border border-line rounded-2xl p-7">
+                <div class="flex items-start justify-between gap-3 mb-2">
+                    <span class="grid place-items-center w-11 h-11 rounded-xl bg-ochre/10 text-ochre text-lg"><i class="fa-solid fa-book-open"></i></span>
+                    <span class="text-sm font-medium text-muted">2016 – 2018</span>
+                </div>
+                <h3 class="font-serif text-xl font-semibold mt-3">Felsefe, Yüksek Lisans</h3>
+                <p class="text-sm text-muted mt-1">29 Mayıs Üniversitesi <span class="text-stone-400">(tamamlanmadı)</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="iletisim" class="py-24 md:py-32 bg-ink text-paper relative overflow-hidden grain">
+    <div aria-hidden="true" class="aurora absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[46rem] h-[46rem] rounded-full bg-royal/15"></div>
+    <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
+        <p class="reveal text-sm font-semibold tracking-wide text-ochre uppercase mb-4">İletişim</p>
+        <h2 class="reveal font-serif text-4xl md:text-5xl font-medium tracking-tight mb-5">Birlikte iyi işler çıkaralım</h2>
+        <p class="reveal text-lg text-paper/70 leading-relaxed mb-10 max-w-xl mx-auto">
+            Veri odaklı dijital ürün yönetimi, sosyolojik araştırma ya da yeni bir teknoloji projesi için
+            aklınızda bir iş varsa yazın — hızlı dönerim.
+        </p>
+
+        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <a href="mailto:yamansnr@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-paper text-ink px-7 py-4 rounded-full font-bold hover:bg-white transition-colors cursor-pointer">
+                <i class="fa-regular fa-paper-plane text-royal"></i> yamansnr@gmail.com
+            </a>
+            <a href="tel:+905524142711" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 border border-white/20 px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors">
+                <i class="fa-solid fa-phone text-ochre"></i> +90 552 414 27 11
+            </a>
+        </div>
+
+        <div class="reveal flex items-center justify-center gap-4">
+            <a href="https://www.linkedin.com/in/yaman-%C5%9Fener-285174422/" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-12 h-12 grid place-items-center rounded-full bg-white/10 hover:bg-royal transition-colors text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/yamansnr4k/" target="_blank" rel="noopener" aria-label="Instagram" class="w-12 h-12 grid place-items-center rounded-full bg-white/10 hover:bg-pink-600 transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:yamansnr@gmail.com" aria-label="E-posta" class="w-12 h-12 grid place-items-center rounded-full bg-white/10 hover:bg-ochre transition-colors text-lg"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink border-t border-white/10 py-8 text-center">
+    <p class="text-sm text-paper/50">
+        &copy; 2026 Yaman Şener · Sosyolog &amp; Dijital Proje Koordinatörü
+    </p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            els.forEach(el => el.classList.add('in'));
+            return;
+        }
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    e.target.style.transitionDelay = Math.min(i * 40, 200) + 'ms';
+                    e.target.classList.add('in');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(el => io.observe(el));
+    });
+</script>
+</body>
+</html>
