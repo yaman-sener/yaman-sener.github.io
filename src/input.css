@@ -74,6 +74,35 @@
         border-bottom: 1px solid #E7E5E4;
     }
 
+    /* Framed screenshot on the light sections — keeps the source aspect ratio,
+       so wildly different captures (portrait book cover, wide site shots) all sit right. */
+    .frame {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border-radius: .9rem;
+        border: 1px solid #E7E5E4;
+        background: #F1EFEC;
+        box-shadow: 0 1px 2px rgba(28, 25, 23, .04);
+        transition: border-color .25s ease, box-shadow .25s ease;
+    }
+    .frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+    }
+    /* Forces a uniform crop when several frames sit in one row and the
+       source captures have different aspect ratios. */
+    .frame-crop { aspect-ratio: 16 / 10; }
+    .frame-crop img { height: 100%; object-fit: cover; object-position: top center; }
+
+    a.frame:hover, .group:hover .frame {
+        border-color: #1C1917;
+        box-shadow: 0 10px 30px rgba(28, 25, 23, .10);
+    }
+    a.frame:hover img, .group:hover .frame img { transform: scale(1.03); }
+
     .shot-veil {
         position: absolute;
         inset: 0;
@@ -120,6 +149,6 @@
 @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
     .animate-ping { animation: none !important; }
-    .shot img { transition: none !important; transform: none !important; }
+    .shot img, .frame img { transition: none !important; transform: none !important; }
     html { scroll-behavior: auto; }
 }
