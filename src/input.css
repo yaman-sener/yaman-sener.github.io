@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html { -webkit-font-smoothing: antialiased; }
+    body { font-feature-settings: "kern", "liga", "calt"; }
+
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #FBFAF8; }
+    ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 6px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+    a:focus-visible, button:focus-visible {
+        outline: 2px solid #1E40AF;
+        outline-offset: 3px;
+        border-radius: 4px;
+    }
+
+    /* Anchor targets clear the fixed 4rem header */
+    :target { scroll-margin-top: 5rem; }
+}
+
+@layer components {
+    /* Editorial highlight behind a word */
+    .hl { background: linear-gradient(180deg, transparent 62%, rgba(180, 83, 9, 0.16) 62%); }
+
+    /* Scroll reveal — only active once JS confirms it can undo it */
+    .js .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity .7s cubic-bezier(.2, .7, .2, 1), transform .7s cubic-bezier(.2, .7, .2, 1);
+    }
+    .js .reveal.in { opacity: 1; transform: translateY(0); }
+
+    .grain::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(28, 25, 23, 0.04) 1px, transparent 1px);
+        background-size: 22px 22px;
+        opacity: .6;
+    }
+
+    /* Ambient glows. Radial gradients instead of blur() filters — same look,
+       no per-frame filter cost on low-end mobile. */
+    .glow { pointer-events: none; }
+    .glow-royal        { background: radial-gradient(closest-side, rgba(30, 64, 175, .16), rgba(30, 64, 175, 0) 100%); }
+    .glow-ochre        { background: radial-gradient(closest-side, rgba(180, 83, 9, .16), rgba(180, 83, 9, 0) 100%); }
+    .glow-royal-strong { background: radial-gradient(closest-side, rgba(59, 130, 246, .22), rgba(59, 130, 246, 0) 100%); }
+
+    /* ---- Project screenshot frames ---- */
+    .shot {
+        position: relative;
+        display: block;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: rgba(255, 255, 255, .06);
+    }
+    .shot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+    }
+    .card:hover .shot img,
+    .shot:hover img,
+    .shot:focus-visible img { transform: scale(1.045); }
+
+    .shot-light {
+        background: #F1EFEC;
+        border-bottom: 1px solid #E7E5E4;
+    }
+
+    .shot-veil {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(to top, rgba(28, 25, 23, .92) 0%, rgba(28, 25, 23, .35) 38%, rgba(28, 25, 23, 0) 72%);
+    }
+
+    .shot-tags {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: .75rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .chip {
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1.45;
+        padding: .2rem .6rem;
+        border-radius: 9999px;
+        white-space: nowrap;
+    }
+    .chip-royal { background: rgba(30, 64, 175, .92); color: #fff; }
+    .chip-ochre { background: rgba(180, 83, 9, .95); color: #fff; }
+    .chip-dark  { background: rgba(28, 25, 23, .72); color: rgba(251, 250, 248, .92); border: 1px solid rgba(255, 255, 255, .14); }
+
+    .badge-new, .badge-wip, .badge-live {
+        position: absolute;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        padding: .25rem .6rem;
+        border-radius: 9999px;
+    }
+    .badge-new  { top: .75rem; right: .75rem; background: #B45309; color: #fff; box-shadow: 0 4px 14px rgba(180, 83, 9, .4); }
+    .badge-wip  { top: .75rem; left: .75rem; background: rgba(28, 25, 23, .8); color: #FCD34D; border: 1px solid rgba(252, 211, 77, .3); }
+    .badge-live { bottom: .75rem; left: 1rem; background: rgba(28, 25, 23, .85); color: #FBFAF8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .animate-ping { animation: none !important; }
+    .shot img { transition: none !important; transform: none !important; }
+    html { scroll-behavior: auto; }
+}

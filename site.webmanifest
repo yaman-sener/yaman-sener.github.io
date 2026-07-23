@@ -1,0 +1,17 @@
+{
+  "name": "Yaman Şener — Sosyolog & Dijital Proje Koordinatörü",
+  "short_name": "Yaman Şener",
+  "description": "Saha araştırmasını veri analizi ve web platformlarıyla birleştiren araştırmacı ve dijital proje koordinatörü.",
+  "lang": "tr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBFAF8",
+  "theme_color": "#1C1917",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
