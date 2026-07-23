@@ -2,7 +2,7 @@
    Repeat visits load from cache instantly; the network still decides what's current.
    Bump CACHE_VERSION whenever index.html or styles.css change. */
 
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const SHELL_CACHE = `shell-${CACHE_VERSION}`;
 const ASSET_CACHE = `assets-${CACHE_VERSION}`;
 const CDN_CACHE = `cdn-${CACHE_VERSION}`;

@@ -92,16 +92,62 @@
         height: auto;
         transition: transform .6s cubic-bezier(.2, .7, .2, 1);
     }
-    /* Forces a uniform crop when several frames sit in one row and the
-       source captures have different aspect ratios. */
-    .frame-crop { aspect-ratio: 16 / 10; }
-    .frame-crop img { height: 100%; object-fit: cover; object-position: top center; }
-
     a.frame:hover, .group:hover .frame {
         border-color: #1C1917;
         box-shadow: 0 10px 30px rgba(28, 25, 23, .10);
     }
     a.frame:hover img, .group:hover .frame img { transform: scale(1.03); }
+
+    /* Compact browser-window thumbnail for the light sections. At this size the
+       page content is a texture, not something to read — the chrome bar carries
+       the domain so the shot doesn't have to be legible. */
+    .browser {
+        display: block;
+        border-radius: .7rem;
+        overflow: hidden;
+        border: 1px solid #E7E5E4;
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(28, 25, 23, .04);
+        transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+    }
+    .browser-bar {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: .4rem .6rem;
+        background: #F5F4F2;
+        border-bottom: 1px solid #E7E5E4;
+    }
+    .browser-dots { display: flex; gap: .22rem; flex: none; }
+    .browser-dots i { display: block; width: .38rem; height: .38rem; border-radius: 9999px; background: #D6D3D1; }
+    .browser-url {
+        font-size: 10.5px;
+        font-weight: 600;
+        color: #78716C;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .browser-shot {
+        display: block;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: #F1EFEC;
+    }
+    .browser-shot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+    }
+    a.browser:hover {
+        border-color: #1C1917;
+        box-shadow: 0 12px 30px rgba(28, 25, 23, .12);
+        transform: translateY(-2px);
+    }
+    a.browser:hover .browser-shot img { transform: scale(1.05); }
+    a.browser:hover .browser-url { color: #1C1917; }
 
     .shot-veil {
         position: absolute;
@@ -149,6 +195,6 @@
 @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
     .animate-ping { animation: none !important; }
-    .shot img, .frame img { transition: none !important; transform: none !important; }
+    .shot img, .frame img, .browser, .browser-shot img { transition: none !important; transform: none !important; }
     html { scroll-behavior: auto; }
 }
