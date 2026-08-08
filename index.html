@@ -65,7 +65,7 @@
       "address": { "@type": "PostalAddress", "addressLocality": "Maltepe", "addressRegion": "İstanbul", "addressCountry": "TR" },
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "Marmara Üniversitesi" },
       "worksFor": { "@type": "Organization", "name": "Dulda Sosyal İnovasyon Merkezi", "url": "https://dulda.org/" },
-      "knowsAbout": ["Sosyal araştırma", "Söylem analizi", "Veri analizi", "SEO", "Dijital proje koordinasyonu", "Ses deşifresi", "Kitap editörlüğü"],
+      "knowsAbout": ["Sosyal araştırma", "Söylem analizi", "Veri analizi", "AI SEO", "Dijital proje koordinasyonu", "Ses deşifresi", "Kitap editörlüğü"],
       "sameAs": [
         "https://www.linkedin.com/in/yaman-%C5%9Fener-285174422/",
         "https://www.instagram.com/yamansnr4k/",
@@ -257,13 +257,13 @@
                 <span class="grid place-items-center w-12 h-12 rounded-xl bg-ochre/10 text-ochre text-xl mb-6"><i class="fa-solid fa-window-restore"></i></span>
                 <h3 class="font-serif text-xl font-semibold mb-3">Dijital platform kurulumu</h3>
                 <p class="text-sm text-muted leading-relaxed mb-5">
-                    Fikirden yayına: içerik üretimi, site içi teknik editörlük, SEO, tasarım koordinasyonu ve
+                    Fikirden yayına: içerik üretimi, site içi teknik editörlük, AI SEO, tasarım koordinasyonu ve
                     kalite kontrol. Dağınık bilgiyi il/ilçe bazlı aranabilir, filtrelenebilir ve hızlı yüklenen
                     arayüzlere taşırım.
                 </p>
                 <ul class="text-sm text-ink/80 space-y-1.5">
                     <li class="flex gap-2"><i class="fa-solid fa-check text-ochre text-xs mt-1.5"></i> İçerik yönetimi &amp; yazı/teknik editörlük</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-ochre text-xs mt-1.5"></i> SEO, Google Analytics &amp; Search Console</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-check text-ochre text-xs mt-1.5"></i> AI SEO, Google Analytics &amp; Search Console</li>
                     <li class="flex gap-2"><i class="fa-solid fa-check text-ochre text-xs mt-1.5"></i> Cloudflare Workers/Pages üzerinde yayın</li>
                 </ul>
             </div>
@@ -319,11 +319,16 @@
                     Yeşilay Başkanı Mehmet Dinç öncülüğünde, <a href="https://dulda.org/" target="_blank" rel="noopener" class="text-royal underline decoration-royal/30 hover:decoration-royal">dulda.org</a>
                     çatısı altında yürütülen dijital sosyal inovasyon projelerinde görev alıyorum. Ortak amaç: niş kalmış
                     toplulukların faaliyetlerini özenli filtrelerle elle seçip tek çatı altında toplamak. Fikir, teknik kurulum,
-                    içerik, tasarım, editörlük, test, SEO ve entegrasyonların tamamında bizzat çalışıyorum.
+                    içerik, tasarım, editörlük, test, AI SEO ve entegrasyonların tamamında bizzat çalışıyorum.
                 </p>
-                <a href="https://dulda.org/" target="_blank" rel="noopener" class="browser w-full max-w-2xl mb-6" aria-label="Dulda Sosyal İnovasyon Merkezi sitesini aç">
-                    <span class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url">dulda.org</span></span>
-                    <span class="browser-shot"><img src="assets/dulda.webp" alt="Dulda Sosyal İnovasyon Merkezi sitesinin hakkında sayfası" width="900" height="427" loading="lazy" decoding="async" class="w-full object-cover"></span>
+                <a href="https://dulda.org/" target="_blank" rel="noopener" class="reveal card group flex flex-col bg-surface border border-line rounded-2xl overflow-hidden hover:shadow-lg hover:border-royal transition-all mb-8 max-w-2xl" aria-label="Dulda Sosyal İnovasyon Merkezi sitesini aç">
+                    <div class="shot relative overflow-hidden">
+                        <img src="assets/dulda.webp" alt="Dulda Sosyal İnovasyon Merkezi sitesinin hakkında sayfası" width="900" height="427" loading="lazy" decoding="async" class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        <div class="absolute bottom-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-xs font-bold px-2.5 py-1 bg-paper/95 backdrop-blur-sm text-ink rounded-md border border-line shadow-sm">Sosyal İnovasyon Merkezi</span>
+                        </div>
+                    </div>
                 </a>
                 <div class="grid sm:grid-cols-2 gap-4">
                     <div class="bg-surface border border-line rounded-xl p-4 flex flex-col">
@@ -557,7 +562,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             <a href="https://survey-api.yamansnr.workers.dev/" target="_blank" rel="noopener" class="reveal card group flex flex-col bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] hover:border-royal transition-colors">
                 <div class="shot">
-                    <img src="assets/anketor.png" alt="Anketör - Yeni Nesil Anket Motoru" width="900" height="427" loading="lazy" decoding="async">
+                    <img src="assets/anketor.webp" alt="Anketör - Yeni Nesil Anket Motoru" width="900" height="427" loading="lazy" decoding="async">
                     <span aria-hidden="true" class="shot-veil"></span>
                     <span class="badge-new">Yeni</span>
                     <div class="shot-tags">
@@ -574,7 +579,7 @@
 
             <a href="https://resimceker.vercel.app/" target="_blank" rel="noopener" class="reveal card group flex flex-col bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] hover:border-ochre transition-colors">
                 <div class="shot">
-                    <img src="assets/resimceker.png" alt="Image Fetcher & Integrator" width="900" height="427" loading="lazy" decoding="async">
+                    <img src="assets/resimceker.webp" alt="Image Fetcher & Integrator" width="900" height="427" loading="lazy" decoding="async">
                     <span aria-hidden="true" class="shot-veil"></span>
                     <span class="badge-new">Yeni</span>
                     <div class="shot-tags">
@@ -1093,10 +1098,10 @@
             </div>
 
             <div class="reveal bg-surface border border-line rounded-2xl p-6">
-                <h3 class="font-serif text-lg font-semibold mb-4 flex items-center gap-2"><i class="fa-solid fa-globe text-royal"></i> Web &amp; SEO</h3>
+                <h3 class="font-serif text-lg font-semibold mb-4 flex items-center gap-2"><i class="fa-solid fa-globe text-royal"></i> Web &amp; AI SEO</h3>
                 <div class="flex flex-wrap gap-2">
                     <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Web kurulum</span>
-                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">SEO</span>
+                    <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">AI SEO</span>
                     <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Google Analytics</span>
                     <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Search Console</span>
                     <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-paper border border-line">Cloudflare Workers/Pages</span>
